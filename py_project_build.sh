@@ -27,6 +27,11 @@ fi
 # pip install Sphinx
 
 
+# Generate base directory and important files.
+mkdir $1
+cd $1
+touch LICENSE README.md TODO.md setup.py requirements.txt
+mkdir -p docs/generated
 
 # Create git repository with .gitignore
 ### MAY NEED TO REVISION IF WANT TO AUTOPUSH DOC CHANGES WITH HTML.
@@ -42,12 +47,6 @@ $1/**/*.html
 *.pdf
 
 EOM
-
-# Generate base directory and important files.
-mkdir $1
-cd $1
-touch LICENSE README.md TODO.md setup.py requirements.txt
-mkdir -p docs/generated
 
 # Generate markdown docs directory. Because I like Markdown better,
 # I write docs in markdown, then use pandoc to convert them to .rst for Sphinx.
