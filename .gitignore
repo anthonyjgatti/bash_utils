@@ -6,4 +6,7 @@ xyz/**/*.html
 .cache
 .tox/
 *.pdf
-
+kubeinstall.sh
+py_project_build.sh
+aws-demo-helper.sh
+*.swp
