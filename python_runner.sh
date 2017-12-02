@@ -157,4 +157,15 @@ elif [ "$2" == "update" ]; then
   pip freeze > requirements.txt
   pip install -e . --upgrade
 
+elif [ "$2" == "clone" ]; then
+
+  # Clone existing package into Python directory.
+  cd $PYTHON_PROJECT_DIR
+  git_url="https://github.com/anthonyjgatti/$1.git"
+  git clone $git_url
+  python3 -m venv $1 
+
+  # Install module into local copy of virtual env.
+  pip install -e . --upgrade
+
 fi
