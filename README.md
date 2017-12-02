@@ -2,8 +2,9 @@
 
 Some utilities I wrote to help myself with bash.
 
-I like to create symbolic links to scripts in /usr/bin
+These scripts are often aliased as `bash <script>.sh *args` in ~/.bash_profile.
 
+The relevant section:
 ```
-ln -s /path/linked/to /path/linked/from
+alias pybuild="/Users/anthony/code/bash_utils/python_runner.sh"
 ```
